@@ -234,7 +234,7 @@ def save_docx(filename, content):
 
 def main():
     user_inputs = collect_user_inputs()
-    token = "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"
+    token = ""#perplexity token here
     prompt = build_sop_prompt(user_inputs)
     response = call_perplexity_api(prompt, token)
     sop = response.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
